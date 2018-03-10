@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Serviços Online" back-link="Back"></f7-navbar>
+    <f7-navbar title="Serviços" back-link="Back"></f7-navbar>
 
     <div class="list accordion-list">
       <ul>
@@ -30,9 +30,9 @@
 </template>
 
 <script>
-import API from '../config/http'
+import API from '../../config/http'
 export default {
-  name: 'ServicosOnline',
+  name: 'OrgaosDetails',
   data () {
     return {
       grupos: []
@@ -40,9 +40,9 @@ export default {
   },
 
   created () {
-    API.get('categorias/11?include=grupos.servicos')
+    API.get(`orgaos/${this.$f7route.params.orgaoId}/grupos?include=servicos`)
       .then(response => {
-        this.grupos = response.data.grupos
+        this.grupos = response.data.results
       })
       .catch( errors => {
         console.log(errors);

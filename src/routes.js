@@ -8,7 +8,11 @@ import PanelLeftPage from './pages/panel-left.vue'
 import PanelRightPage from './pages/panel-right.vue'
 
 import ServicosOnline from './pages/servicos-online.vue'
-import OrgaosPage from './pages/orgaos.vue'
+
+import OrgaosPage from './pages/orgaos/orgaos.vue'
+import OrgaoDetails from './pages/orgaos/orgao-details.vue'
+
+import ServicoDetails from './pages/servicos-details.vue'
 
 export default [
   {
@@ -36,15 +40,39 @@ export default [
     component: DynamicRoutePage,
   },
 
-
+  // Serviços Online
   {
     path: '/servicos-online/',
     component: ServicosOnline,
   },
+
+  // Órgãos
   {
     path: '/orgaos/',
     component: OrgaosPage,
+    // routes: [
+    //   {
+    //     path: ':orgaoId/',
+    //     component: OrgaoDetails,
+    //   }
+    // ]
   },
+  {
+    path: '/orgaos/:orgaoId',
+    component: OrgaoDetails,
+  },
+
+  // Servicos
+  {
+    path: '/servicos/:servicoId',
+    component: ServicoDetails,
+  },
+
+  // Grupos
+  // {
+  //   path: '/grupos/:grupoId/',
+  //   component: GruposPage,
+  // },
 
   {
     path: '(.*)',
