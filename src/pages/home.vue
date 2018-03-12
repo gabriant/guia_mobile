@@ -9,6 +9,18 @@
         <f7-link icon-if-ios="f7:menu" icon-if-md="material:menu" panel-open="right"></f7-link>
       </f7-nav-right> -->
     </f7-navbar>
+
+    <form class="searchbar">
+      <div class="searchbar-inner">
+        <div class="searchbar-input-wrap">
+          <input type="search" placeholder="Search">
+          <i class="searchbar-icon"></i>
+          <span class="input-clear-button"></span>
+        </div>
+        <span class="searchbar-disable-button">Cancel</span>
+      </div>
+    </form>
+
     <!-- <f7-toolbar>
       <f7-link>Left Link</f7-link>
       <f7-link>Right Link</f7-link>
@@ -19,6 +31,7 @@
     <f7-block-title>Páginas</f7-block-title>
     <f7-list>
       <f7-list-item link="/orgaos/" title="Órgãos"></f7-list-item>
+      <f7-list-item link="/pracas/" title="Praças"></f7-list-item>
       <f7-list-item link="/servicos-online/" title="Serviços Online"></f7-list-item>
     </f7-list>
     <!-- <f7-block-title>Modals</f7-block-title>

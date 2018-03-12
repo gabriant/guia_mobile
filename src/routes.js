@@ -12,6 +12,8 @@ import ServicosOnline from './pages/servicos-online.vue'
 import OrgaosPage from './pages/orgaos/orgaos.vue'
 import OrgaoDetails from './pages/orgaos/orgao-details.vue'
 
+import PracasPage from './pages/pracas/pracas.vue'
+
 import ServicoDetails from './pages/servicos-details.vue'
 
 export default [
@@ -60,6 +62,18 @@ export default [
   {
     path: '/orgaos/:orgaoId',
     component: OrgaoDetails,
+  },
+
+  // Praças
+  {
+    path: '/pracas/',
+    component: PracasPage,
+    // routes: [
+    //   {
+    //     path: ':orgaoId/',
+    //     component: OrgaoDetails,
+    //   }
+    // ]
   },
 
   // Servicos
