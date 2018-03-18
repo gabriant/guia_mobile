@@ -1,1 +1,10 @@
-/* Your app styles here */
+/* List */
+
+.list .item-title {
+  white-space: normal;
+}
+
+/* Navbar */
+.navbar {
+  background: #D64D21 !important;
+}

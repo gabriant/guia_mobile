@@ -7,14 +7,16 @@ import NotFoundPage from './pages/not-found.vue'
 import PanelLeftPage from './pages/panel-left.vue'
 import PanelRightPage from './pages/panel-right.vue'
 
-import ServicosOnline from './pages/servicos-online.vue'
+import ServicosOnline from './pages/servicos/servicos-online.vue'
+import ServicoDetails from './pages/servicos/servicos-details.vue'
 
 import OrgaosPage from './pages/orgaos/orgaos.vue'
 import OrgaoDetails from './pages/orgaos/orgao-details.vue'
 
 import PracasPage from './pages/pracas/pracas.vue'
 
-import ServicoDetails from './pages/servicos-details.vue'
+import SearchResultsPage from './pages/search-results'
+
 
 export default [
   {
@@ -40,6 +42,11 @@ export default [
   {
     path: '/dynamic-route/blog/:blogId/post/:postId/',
     component: DynamicRoutePage,
+  },
+
+  {
+    path: '/busca/:searchText/',
+    component: SearchResultsPage,
   },
 
   // Serviços Online

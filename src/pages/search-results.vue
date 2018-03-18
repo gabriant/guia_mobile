@@ -1,13 +1,22 @@
 <template>
   <f7-page>
-    <f7-navbar :title="orgaoNome" back-link="Back"></f7-navbar>
+    <f7-navbar title="Resultados da busca" back-link="Back"></f7-navbar>
 
-    <div class="block-title">{{ orgao.nome }}</div>
+    <div class="block-title">Resultados da pesquisa para: <em><strong>{{ this.$f7route.params.searchText }}</strong></em></div>
 
-    <div class="list accordion-list">
+    <f7-list>
+      <f7-list-item
+        v-for="servico in servicos"
+        :key="servico.id"
+        :link="`/servicos/${servico.id}`"
+        :title="servico.titulo">
+      </f7-list-item>
+    </f7-list>
+
+    <!-- <div class="list">
       <ul>
         <li class="accordion-item"
-          v-for="grupo in orgao.grupos"
+          v-for="grupo in grupos"
           :key="grupo.id"
         >
           <a href="" class="item-link item-content">
@@ -26,25 +35,24 @@
           </div>
         </li>
       </ul>
-    </div>
+    </div> -->
 
   </f7-page>
 </template>
 
 <script>
-import API from '../../config/http'
 export default {
-  name: 'OrgaosDetails',
+  name: 'SearchResults',
   data () {
     return {
-      orgao: {}
+      servicos: {}
     }
   },
 
   created () {
-    API.get(`orgaos/${this.$f7route.params.orgaoId}?include=grupos.servicos`)
-      .then(response => {
-        this.orgao = response.data
+    this.$store.dispatch('getSearch', [ 'servicos', this.$f7route.params.searchText ])
+      .then(results => {
+        this.servicos = results
       })
       .catch( errors => {
         console.log(errors);
@@ -52,13 +60,7 @@ export default {
   },
 
   computed: {
-    orgaoNome ()
-    {
-      if (this.orgao.sigla) {
-        return this.orgao.sigla
-      }
-      return this.orgao.nome
-    }
+
   }
 
 }

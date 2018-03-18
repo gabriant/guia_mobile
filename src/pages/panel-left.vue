@@ -11,7 +11,10 @@
     </f7-list> -->
     <f7-block-title>Páginas</f7-block-title>
     <f7-list>
-      <f7-list-item link="/orgaos/" title="Órgãos" view="#main-view" panel-close></f7-list-item>
+      <!-- <f7-list-item link="/orgaos/" title="Órgãos" view="#main-view" panel-close></f7-list-item>
+      <f7-list-item link="/servicos-online/" title="Serviços Online" view="#main-view" panel-close></f7-list-item> -->
+      <f7-list-item link="/orgaos/" title="Serviços por Órgãos" view="#main-view" panel-close></f7-list-item>
+      <f7-list-item link="/pracas/" title="Serviços por Praças" view="#main-view" panel-close></f7-list-item>
       <f7-list-item link="/servicos-online/" title="Serviços Online" view="#main-view" panel-close></f7-list-item>
     </f7-list>
   </f7-page>

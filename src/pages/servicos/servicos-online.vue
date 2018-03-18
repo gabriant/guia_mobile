@@ -2,6 +2,10 @@
   <f7-page>
     <f7-navbar title="Serviços Online" back-link="Back"></f7-navbar>
 
+    <div class="block">
+      <h4>Pensando em proporcionar melhor comodidade, listamos para você, cidadão, serviços que podem ser realizados pela internet.</h4>
+    </div>
+
     <div class="list accordion-list">
       <ul>
         <li class="accordion-item"
@@ -10,7 +14,7 @@
         >
           <a href="" class="item-link item-content">
             <div class="item-inner">
-              <div class="item-title">{{ grupo.titulo }}</div>
+              <div class="item-title"><strong>{{ grupo.titulo }}</strong></div>
             </div>
           </a>
           <div class="accordion-item-content">
@@ -30,7 +34,7 @@
 </template>
 
 <script>
-import API from '../config/http'
+import API from '@/config/http'
 export default {
   name: 'ServicosOnline',
   data () {

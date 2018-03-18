@@ -20,17 +20,23 @@ import Routes from './routes.js'
 // Import App Component
 import App from './app';
 
+// Vuex store
+import store from './store/store'
+
 // Init F7 Vue Plugin
 Vue.use(Framework7Vue, Framework7)
+
+window._ = require('lodash')
 
 // Init App
 new Vue({
   el: '#app',
+  store,
   template: '<app/>',
   // Init Framework7 by passing parameters here
   framework7: {
-    id: 'io.framework7.testapp', // App bundle ID
-    name: 'Framework7', // App name
+    id: 'io.guiaoca.testapp', // App bundle ID
+    name: 'Guia OCA', // App name
     theme: 'auto', // Automatic theme detection
     // App routes
     routes: Routes,

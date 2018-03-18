@@ -10,7 +10,7 @@
         >
           <a href="" class="item-link item-content">
             <div class="item-inner">
-              <div class="item-title">{{ praca.nome }}</div>
+              <div class="item-title"><strong>{{ praca.nome }}</strong></div>
             </div>
           </a>
           <div class="accordion-item-content">
