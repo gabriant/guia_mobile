@@ -9,7 +9,7 @@ const STATUS = 'dev'
 
 const BASE_URL = {
   'dev': 'http://localhost:8000',
-  'production': 'insiraurlaqui.com'
+  'production': 'https://guia-api-beta.herokuapp.com'
 }
 
 export const API_URL = BASE_URL[STATUS] + '/api/v1'
